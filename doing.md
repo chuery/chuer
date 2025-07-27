@@ -3,11 +3,25 @@ layout: default
 title: Doing
 ---
 
-## exploring!
-
+figuring out life and such
 - **Geodesic Dome at Half Moon Bay (2025)**  
   Built a geodesic dome for my 20th birthday. Inspired by the Buckminster Fuller papers I came across at the Stanford Special Collections Archive.
 
+## Sustainability
+*Currently*: helping organize [Stanford Climate Week 2025](https://www.stanfordclimateweek.com/)!
+
+- **Stanford Sustainable Investment Group (2025)**
+Nation's first student-run investment advisory for leading sustainability investors and Stanford's premier climate, business, and innovation community. 
+Co-authored 30+ page investment report for the Westly Group on nuclear energy in sustainable data center supply chains; conducted due diligence on 10+ startups through expert interviews, historical analysis of 100+ sources, and market trend synthesis.
+
+- **Green AI**
+Co-authored white paper on data center siting, focusing on nuclear energy and colocation. Presented at 2025 Harvard x Bostun University Green AI Summit. 
+
+- **United States Geological Survey (2022)**  
+  Spent a summer in the Sacramento San Joaquin Delta as a hydrology intern with boats, water sondes, ADCPs, and my best friend.  
+  Conducted field work and researched the effect of droughts (measured by discharge and dissolved oxygen levels) on the Striped Bass within the Sacramento Deep Water Ship Channel.
+
+## Social Impact
 - **Havenlink (2025)**  
   [Havenlink](http://havenlink.org){:target="_blank"} leverages AI to help homeless people find resources.
 
@@ -26,6 +40,4 @@ title: Doing
   Worked against Sacramento jail expansions.  
   Volunteered at the Inside/Outside jail hotline by answering calls from inside the Rio Cosumnes Correctional Center and Sacramento City Main Jail to support folks inside with jail conditions.
 
-- **United States Geological Survey (2022)**  
-  Spent a summer in the Sacramento San Joaquin Delta as a hydrology intern with boats, water sondes, ADCPs, and my best friend.  
-  Conducted field work and researched the effect of droughts (measured by discharge and dissolved oxygen levels) on the Striped Bass within the Sacramento Deep Water Ship Channel.
+

@@ -23,8 +23,6 @@ the art of consumption
 - Nicomachean Ethics – Aristotle  
 - Existentialism is a Humanism – Jean-Paul Sartre  
 - The Picture of Dorian Gray - Oscar Wilde  
-- [List of books by Stanford Philosophy + Literature](https://philit.stanford.edu/library/foundational-books)
-
 ---
 
 ## Poetry
@@ -67,6 +65,7 @@ Because what else is there to live for?
 - [Entitled Opinions - Robert Pogue Harrison](https://entitledopinions.stanford.edu/)  
 - [Philosophy Talk - Ray Briggs, Joshua Landy](https://www.philosophytalk.org/)  
 
+---
 
 ## Misc.
 
@@ -76,4 +75,6 @@ Because what else is there to live for?
 - [Caravaggio & Imagination - James Buckhouse](https://jamesbuckhouse.substack.com/p/letter-35)  
 - [Musical Dice Game](https://dice.humdrum.org/)  
 - [Off the Grid Cabin](https://youtu.be/Je_WpPG4qM0?si=jFxdTHzlWd0kthuT)  
+- [List of books by Stanford Philosophy + Literature](https://philit.stanford.edu/library/foundational-books)
+
 
