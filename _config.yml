@@ -1,0 +1,5 @@
+title: Chuer's site
+description: My personal site with Jekyll
+theme: minima
+baseurl: "/chuer"  
+url: "https://chuery.github.io"
