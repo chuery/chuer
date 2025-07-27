@@ -1,7 +1,7 @@
 title: Chuer Yang
 description: Personal website for thoughts, projects, and curiosities
-baseurl: "/chuer"        # Important! Matches the repo name for project pages
-url: "https://chuery.github.io"  # Your GitHub Pages domain root
+baseurl: "/chuer"       
+url: "https://chuery.github.io"  
 
 markdown: kramdown
 theme: minima
