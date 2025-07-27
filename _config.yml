@@ -1,5 +1,12 @@
-title: Chuer's site
-description: My personal site with Jekyll
+title: Chuer Yang
+description: Personal website for thoughts, projects, and curiosities
+baseurl: "/chuer"        # Important! Matches the repo name for project pages
+url: "https://chuery.github.io"  # Your GitHub Pages domain root
+
+markdown: kramdown
 theme: minima
-baseurl: "/chuer"  
-url: "https://chuery.github.io"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+permalink: pretty
