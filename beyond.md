@@ -3,6 +3,7 @@ layout: default
 title: "& Beyond"
 ---
 other things i like
+
 **Geodesic Dome at Half Moon Bay (2025)**  
 I built a geodesic dome for my 20th birthday. Inspired by the Buckminster Fuller papers I came across at the Stanford Special Collections Archive.
 
@@ -13,36 +14,12 @@ I ran 19k on May 19 for my 19th birthday! I did it as a part of Bay2Breakers and
 Back in my rowing days, I erged a half marathon with my good friend Kathryn in the River City Rowing Club boathouse.
 
 <div style="text-align: center; margin-top: 20px;">
-  <img src="/assets/erg1.png" alt="Erging Half Marathon 1" style="max-width: 300px; margin: 10px;">
-  <img src="/assets/erg2.png" alt="Erging Half Marathon 2" style="max-width: 300px; margin: 10px;">
+<img src="{{ '/assets/erg1.png' | relative_url }}" alt="Erging Half Marathon 1" style="max-width: 300px; margin: 10px;">
+<img src="{{ '/assets/erg2.png' | relative_url }}" alt="Erging Half Marathon 1" style="max-width: 300px; margin: 10px;">
 </div>
 
 **Run to feed the hungry (2021, 2022, 2023, 2024)**
 I am a religious turkey trotter.
-
----
-layout: default
-title: "& Beyond"
----
-
-other things i like  
-**Geodesic Dome at Half Moon Bay (2025)**  
-I built a geodesic dome for my 20th birthday. Inspired by the Buckminster Fuller papers I came across at the Stanford Special Collections Archive.
-
-**19k for 19 (2024)**  
-I ran 19k on May 19 for my 19th birthday! I did it as a part of Bay2Breakers and added the 7k at Lombard Street...that was not a good idea. I also did not train for this at all and my knees suffered for many months after. 
-
-**Half marathon (2022)**  
-Back in my rowing days, I erged a half marathon with my good friend Kathryn in the River City Rowing Club boathouse.
-
-<div style="text-align: center; margin-top: 20px;">
-  <img src="/assets/erg1.png" alt="Erging Half Marathon 1" style="max-width: 300px; margin: 10px;">
-  <img src="/assets/erg2.png" alt="Erging Half Marathon 2" style="max-width: 300px; margin: 10px;">
-</div>
-
-**Run to feed the hungry (2021, 2022, 2023, 2024)**  
-I am a religious turkey trotter.
-
 <!-- Bootstrap CSS & JS via CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
