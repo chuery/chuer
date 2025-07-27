@@ -1,11 +1,7 @@
 ---
 layout: default
-title: Doing – Chuer Yang
+title: Doing
 ---
-
-# Doing
-
-[Home](../index.html) | [Doing](doing.html) | [Thinking](thinking.html) | [Enjoying](enjoying.html) | [Cool People](people.html)
 
 ## exploring!
 
