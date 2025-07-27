@@ -21,8 +21,9 @@ the art of consumption
 
 - Meditations on First Philosophy - René Descartes  
 - Nicomachean Ethics – Aristotle  
-- Existentialism is a Humanism – Jean-Paul Sartre  
 - The Picture of Dorian Gray - Oscar Wilde  
+- Existentialism is a Humanism – Jean-Paul Sartre  
+
 ---
 
 ## Poetry

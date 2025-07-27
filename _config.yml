@@ -10,3 +10,8 @@ plugins:
   - jekyll-seo-tag
 
 permalink: pretty
+
+collections:
+  travels:
+    output: true
+    permalink: /wanderings/:name/
