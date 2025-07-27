@@ -4,6 +4,8 @@ title: Doing
 ---
 
 figuring out life and such
+
+I'm just really into geodesic domes
 - **Geodesic Dome at Half Moon Bay (2025)**  
   Built a geodesic dome for my 20th birthday. Inspired by the Buckminster Fuller papers I came across at the Stanford Special Collections Archive.
 

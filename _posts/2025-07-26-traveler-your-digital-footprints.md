@@ -1,8 +1,7 @@
 ---
 layout: post
-title: "Traveler, your (digital) footprints"
-date: 2025-07-26 11:51:00 -0700
-categories: blog
+title: "Traveler: Your Digital Footprints"
+date: 2025-07-26 10:00:00 -0700
 ---
 
 Originally published in the [Stanford Daily](https://stanforddaily.com/2025/02/19/traveler-your-digital-footprints-meeting-dr-t-and-antonio-machado/) on February 19, 2025
