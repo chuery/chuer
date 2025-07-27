@@ -2,7 +2,7 @@
 layout: default
 title: Enjoying
 ---
-
+the art of consumption 
 ## Some Books I've Loved
 
 *Currently:* **Small Is Beautiful: Economics as if People Mattered**
@@ -17,13 +17,12 @@ title: Enjoying
 - On the Road – Jack Kerouac  
 - Becoming Trader Joe - Joe Coulombe  
 
-## Reads that are Pillars of my Thought
+## Pillars of my Thought
 
 - Meditations on First Philosophy - René Descartes  
 - Nicomachean Ethics – Aristotle  
 - Existentialism is a Humanism – Jean-Paul Sartre  
 - The Picture of Dorian Gray - Oscar Wilde  
-
 - [List of books by Stanford Philosophy + Literature](https://philit.stanford.edu/library/foundational-books)
 
 ---
@@ -39,9 +38,7 @@ title: Enjoying
 
 ## Maps
 
-Thanks to Professor Wigen for the most amazing introseminar at Stanford (History 95N forever!) and to David Rumsey for creating the place where it all started for me.
-
-- Where it all started: [David Rumsey Map Collection](https://www.davidrumsey.com/)  
+Thanks to Professor Wigen for the most amazing introseminar at Stanford (History 95N forever!) and to David Rumsey for creating the place where it all started for me: [David Rumsey Map Collection](https://www.davidrumsey.com/)  
 - [Cosmology To Cartography - Sacred Maps from the Indian Subcontinent (Google Arts)](https://artsandculture.google.com/story/cosmology-to-cartography-sacred-maps-from-the-indian-subcontinent-kalakriti-archives/NgXRzO0BWWZ3Jw?hl=en)  
 - [Different maps of the Middle East](https://mideast.unc.edu/where/)  
 - [Lisbon 1636](https://searchworks.stanford.edu/view/nr407tj3054)  
@@ -56,7 +53,7 @@ Thanks to Professor Wigen for the most amazing introseminar at Stanford (History
 
 ## Art
 
-What else is there to live for?
+Because what else is there to live for?
 
 - Landscape with the Fall of Icarus - Pieter Bruegel the Elder  
 - [Water Lilies (1916–19) - Claude Monet](https://www.metmuseum.org/art/collection/search/437137)  
@@ -65,6 +62,12 @@ What else is there to live for?
 
 ---
 
+## Podcasts & Newsletters
+- [Cool Stanford Podcasts](https://community.stanford.edu/discover/cool-stanford-podcasts)  
+- [Entitled Opinions - Robert Pogue Harrison](https://entitledopinions.stanford.edu/)  
+- [Philosophy Talk - Ray Briggs, Joshua Landy](https://www.philosophytalk.org/)  
+
+
 ## Misc.
 
 - [Digital Dante](https://digitaldante.columbia.edu/history/)  
@@ -72,3 +75,5 @@ What else is there to live for?
 - [Nüshu: China’s secret female-only language](https://www.bbc.com/travel/article/20200930-nshu-chinas-secret-female-only-language)  
 - [Caravaggio & Imagination - James Buckhouse](https://jamesbuckhouse.substack.com/p/letter-35)  
 - [Musical Dice Game](https://dice.humdrum.org/)  
+- [Off the Grid Cabin](https://youtu.be/Je_WpPG4qM0?si=jFxdTHzlWd0kthuT)  
+
