@@ -15,18 +15,11 @@ I also have a column at the Stanford Daily, check out [*Traveler, your (digital)
   {% endfor %}
 </ul>
 
+ponderings in progress:
+- Nuclear energy
+- Rationalistic intuition
+- Golden dreams under a geodesic dome
 
-Nuclear energy
-
-Rationalistic intuition
-
-Golden dreams under a geodesic dome
-
-An escalator to heaven
-
-Cappuccino catalysis
-
-Savant vibes
 
 
 

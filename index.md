@@ -6,12 +6,11 @@ title: Home
   Hi! I'm Chuer, a junior at Stanford interested in tech in sustainability & social impact.
 </div>
 
-<div style="display: flex; flex-direction: column; align-items: flex-start; max-width: 300px; gap: 10px;">
-  <!-- Image on top -->
-  <img src="{{ '/assets/dymaxion.jpg' | relative_url }}" alt="Dymaxion Map" style="width: 100%;">
+<!-- First image-text pair -->
+<div style="display: flex; align-items: flex-start; max-width: 700px; gap: 20px; margin-bottom: 2rem;">
+  <img src="{{ '/assets/dymaxion.jpg' | relative_url }}" alt="Dymaxion Map" style="width: 300px; flex-shrink: 0;">
 
-  <!-- Text below -->
-  <p>
+  <p style="flex: 1; margin: 0;">
     Otherwise this stone would seem defaced<br />
     beneath the translucent cascade of the shoulders<br />
     and would not glisten like a wild beast’s fur:<br />
@@ -22,13 +21,12 @@ title: Home
   </p>
 </div>
 
-<div style="display: flex; flex-direction: column; align-items: flex-start; max-width: 300px; gap: 10px;">
-  <img src="{{ '/assets/communesdome.jpg' | relative_url }}" alt="Communes Dome" style="width: 100%;">
+<!-- Second image-text pair -->
+<div style="display: flex; align-items: flex-start; max-width: 700px; gap: 20px;">
+  <img src="{{ '/assets/communesdome.jpg' | relative_url }}" alt="Communes Dome" style="width: 300px; flex-shrink: 0;">
 
-  <p>
+  <p style="flex: 1; margin: 0;">
     “Live! Live the wonderful life that is in you! Let nothing be lost upon you. <em>Be always searching for new sensations.</em> Be afraid of nothing.”<br />
     ― Oscar Wilde, <em>The Picture of Dorian Gray</em>
   </p>
 </div>
-
-

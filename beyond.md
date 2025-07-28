@@ -20,36 +20,12 @@ Back in my rowing days, I erged a half marathon with my good friend Kathryn in t
 
 **Run to feed the hungry (2021, 2022, 2023, 2024)**
 I am a religious turkey trotter.
-<!-- Bootstrap CSS & JS via CDN -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<div style="text-align: center; margin-top: 20px;">
+<img src="{{ '/assets/run2024.png' | relative_url }}" alt="Run to Feed the Hungry 2024" style="max-width: 200px; margin: 10px;">
+<img src="{{ '/assets/run2023.png' | relative_url }}" alt="Run to Feed the Hungry 2023" style="max-width: 200px; margin: 10px;">
+<img src="{{ '/assets/run2022.png' | relative_url }}" alt="Run to Feed the Hungry 2022" style="max-width: 200px; margin: 10px;">
+<img src="{{ '/assets/run2021.png' | relative_url }}" alt="Run to Feed the Hungry 2021" style="max-width: 200px; margin: 10px;">
 
-<div id="runCarousel" class="carousel slide mb-5" data-bs-ride="carousel" style="max-width: 700px; margin: 2rem auto;">
-  <div class="carousel-inner rounded shadow">
-    <div class="carousel-item active">
-      <img src="/assets/run2021.png" class="d-block w-100" alt="Run 2021">
-    </div>
-    <div class="carousel-item">
-      <img src="/assets/run2022.png" class="d-block w-100" alt="Run 2022">
-    </div>
-    <div class="carousel-item">
-      <img src="/assets/run2023.png" class="d-block w-100" alt="Run 2023">
-    </div>
-    <div class="carousel-item">
-      <img src="/assets/run2024.png" class="d-block w-100" alt="Run 2024">
-    </div>
-  </div>
-
-  <!-- Navigation arrows -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#runCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#runCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
 ---
 **Traveling**
@@ -61,7 +37,7 @@ I am a religious turkey trotter.
   <button onclick="filterMap('cerebral')">Cerebral</button>
 </div>
 
-<div id="travel-map" style="height: 400px; margin-top: 1em;"></div>
+<div id="travel-map" style="height: 400px; margin-top: 1em;text-align: center"></div>
 
 <script>
   // Load Leaflet

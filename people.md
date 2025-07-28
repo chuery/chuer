@@ -15,6 +15,7 @@ cool people whose websites are excellent venues for intellectual stimulation.
 - [David Rumsey](https://www.davidrumsey.com/) 
 - [Diana Leung](https://dll110.github.io/)
 - [Emmanuel Balogun](https://www.e-balogun.com/)
+- [Nathan Zhao](https://nathanzhao.cc/resume), who helped me start this! 
 
 
 
