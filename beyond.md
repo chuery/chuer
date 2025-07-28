@@ -21,6 +21,8 @@ Back in my rowing days, I erged a half marathon with my good friend Kathryn in t
 **Run to feed the hungry (2021, 2022, 2023, 2024)**
 I am a religious turkey trotter.
 <!-- Bootstrap CSS & JS via CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <div id="runCarousel" class="carousel slide mb-5" data-bs-ride="carousel" style="max-width: 700px; margin: 2rem auto;">
   <div class="carousel-inner rounded shadow">
