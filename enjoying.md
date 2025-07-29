@@ -2,6 +2,50 @@
 layout: default
 title: Enjoying
 ---
+
+<style>
+.books-and-widget {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.book-list {
+  flex: 1;
+  min-width: 250px;
+}
+
+#gr_updates_widget {
+  border-radius: 12px;
+  background-color: #1e1e1e;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  color: white;
+}
+
+#gr_updates_widget iframe {
+  width: 100%;
+  height: 330px;
+}
+
+#gr_footer img {
+  width: 80px;
+  filter: brightness(0) invert(1);
+}
+
+#gr_updates_widget img {
+  border-style: none;
+}
+</style>
+
+<div class="books-and-widget">
+  <div class="book-list">
+
 the art of consumption 
 ## Some Books I've Loved
 
@@ -23,6 +67,17 @@ the art of consumption
 - Nicomachean Ethics – Aristotle  
 - The Picture of Dorian Gray - Oscar Wilde  
 - Existentialism is a Humanism – Jean-Paul Sartre  
+  </div>
+
+  <div id="gr_updates_widget">
+    <iframe sandbox id="the_iframe" src="https://www.goodreads.com/widgets/user_update_widget?height=400&amp;num_updates=3&amp;user=112232536&amp;width=250" frameborder="0"></iframe>
+    <div id="gr_footer">
+      <a href="https://www.goodreads.com/">
+        <img alt="Goodreads: Book reviews, recommendations, and discussion" rel="nofollow" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" />
+      </a>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -62,6 +117,10 @@ Because what else is there to live for?
 ---
 
 ## Podcasts & Newsletters
+- [Payload Space](https://payloadspace.com/)
+- [Where the Internet Lives](https://open.spotify.com/show/2Y5ish3Fs4ZbnKYYVG59HT)
+- [The Data Center Frontier Show](https://www.datacenterfrontier.com/podcast)
+- [Decouple](https://www.decouple.media/podcast/archive?sort=new)
 - [Cool Stanford Podcasts](https://community.stanford.edu/discover/cool-stanford-podcasts)  
 - [Entitled Opinions - Robert Pogue Harrison](https://entitledopinions.stanford.edu/)  
 - [Philosophy Talk - Ray Briggs, Joshua Landy](https://www.philosophytalk.org/)  
