@@ -82,5 +82,6 @@ Because what else is there to live for?
 - [Musical Dice Game](https://dice.humdrum.org/)  
 - [Off the Grid Cabin](https://youtu.be/Je_WpPG4qM0?si=jFxdTHzlWd0kthuT)  
 - [List of books by Stanford Philosophy + Literature](https://philit.stanford.edu/library/foundational-books)
+- [Cave Art, Autism, and the Evolution of the Human Mind](https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/abs/cave-art-autism-and-the-evolution-of-the-human-mind/7E969D1ACAB536BD809348B9B4FE5C4D)
 
 
