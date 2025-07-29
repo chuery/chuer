@@ -10,4 +10,4 @@ date: 2024-08-20
 September 1 - 4, 2024
 
 ### highlights 
-a lot of shopping
+- a lot of shopping

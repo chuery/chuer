@@ -10,5 +10,5 @@ date: 2023-07-03
 July 3 - 5, 2023
 
 ### highlights 
-dutch art in the museum of fine arts 
-belgian waffles 
+- dutch art in the museum of fine arts 
+- belgian waffles 

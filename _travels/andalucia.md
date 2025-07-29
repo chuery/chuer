@@ -11,7 +11,7 @@ December 27, 2023 - January 3, 2024
 granada, seville, cordoba
 
 ### highlights 
-learning about the history of the gypsies 
-grapes at midnight in seville for the new year
-reading norwegian wood 
+- learning about the history of the gypsies 
+- grapes at midnight in seville for the new year
+- reading norwegian wood 
 

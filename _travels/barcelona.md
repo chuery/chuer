@@ -12,7 +12,7 @@ Read: *Ghosts of Spain: Travels Through Spain and Its Silent Past* by Giles Trem
 read my review [here](https://www.goodreads.com/book/show/94797.Ghosts_of_Spain)
 
 ### highlights 
-sunrise paddleboarding on the barceloneta
-making a new friend in a random shoe store and spending my last day in the city with her
-my first 煎饼果子
-so much gaudi 
+- sunrise paddleboarding on the barceloneta
+- making a new friend in a random shoe store and spending my last day in the city with her
+- my first 煎饼果子
+- so much gaudi 

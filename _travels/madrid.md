@@ -10,6 +10,6 @@ date: 2023-12-25
 December 2023
 
 ### highlights 
-christ on the cross at prado
-el greco exhibit at prado
-day trip to toledo (don quixote!)
+- christ on the cross at prado
+- el greco exhibit at prado
+- day trip to toledo (don quixote!)
