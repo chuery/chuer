@@ -13,23 +13,11 @@ I ran 19k on May 19 for my 19th birthday! I did it as a part of Bay2Breakers and
 **Half marathon (2022)**
 Back in my rowing days, I erged a half marathon with my good friend Kathryn in the River City Rowing Club boathouse.
 
-<div style="text-align: center; margin-top: 20px;">
-<img src="{{ '/assets/erg1.png' | relative_url }}" alt="Erging Half Marathon 1" style="max-width: 300px; margin: 10px;">
-<img src="{{ '/assets/erg2.png' | relative_url }}" alt="Erging Half Marathon 1" style="max-width: 300px; margin: 10px;">
-</div>
-
 **Run to feed the hungry (2021, 2022, 2023, 2024)**
 I am a religious turkey trotter.
-<div style="text-align: center; margin-top: 20px;">
-<img src="{{ '/assets/run2024.png' | relative_url }}" alt="Run to Feed the Hungry 2024" style="max-width: 200px; margin: 10px;">
-<img src="{{ '/assets/run2023.png' | relative_url }}" alt="Run to Feed the Hungry 2023" style="max-width: 200px; margin: 10px;">
-<img src="{{ '/assets/run2022.png' | relative_url }}" alt="Run to Feed the Hungry 2022" style="max-width: 200px; margin: 10px;">
-<img src="{{ '/assets/run2021.png' | relative_url }}" alt="Run to Feed the Hungry 2021" style="max-width: 200px; margin: 10px;">
-
 
 ---
 **Traveling**
-## 🌍 Wandering Map
 
 <div id="map-toggle">
   <button onclick="filterMap('all')">All</button>
