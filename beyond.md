@@ -41,7 +41,7 @@ I am a religious turkey trotter.
   function renderMap() {
     const map = L.map('travel-map').setView([20, 0], 2);
 
-    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2h1ZXJ5IiwiYSI6ImNtZG56NGJ3bjA3cnQybnBzaHltaDJxYXcifQ.1AKb_ToUJ12wuhrUKKWoew', {
+    L.tileLayer('https://api.mapbox.com/styles/v1/chuery/cmdnz6y9g03u901r4c1eg1zkt/tiles/512/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2h1ZXJ5IiwiYSI6ImNtZG56NGJ3bjA3cnQybnBzaHltaDJxYXcifQ.1AKb_ToUJ12wuhrUKKWoew', {
   tileSize: 512,
   zoomOffset: -1,
   attribution: '&copy; OpenStreetMap contributors &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
