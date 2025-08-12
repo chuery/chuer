@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Travel Location</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        textarea {
+            height: 200px;
+            resize: vertical;
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background: #2563eb;
+        }
+        .output {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #f3f4f6;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Travel Location</h1>
+    
+    <form id="travelForm">
+        <div class="form-group">
+            <label for="name">Location Name:</label>
+            <input type="text" id="name" required placeholder="e.g., Paris">
+        </div>
+        
+        <div class="form-group">
+            <label for="slug">URL Slug:</label>
+            <input type="text" id="slug" required placeholder="e.g., paris">
+        </div>
+        
+        <div class="form-group">
+            <label for="coords">Coordinates (lat,lng):</label>
+            <input type="text" id="coords" required placeholder="e.g., 48.8566,2.3522">
+        </div>
+        
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="content">Content (Markdown):</label>
+            <textarea id="content" placeholder="## paris 2024&#10;October 15 - 20, 2024&#10;&#10;### highlights&#10;- eiffel tower&#10;- croissants"></textarea>
+        </div>
+        
+        <button type="submit">Generate YAML Entry</button>
+    </form>
+    
+    <div id="output" class="output" style="display: none;"></div>
+    
+    <script>
+        document.getElementById('travelForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const slug = document.getElementById('slug').value;
+            const coords = document.getElementById('coords').value.split(',').map(c => parseFloat(c.trim()));
+            const date = document.getElementById('date').value;
+            const content = document.getElementById('content').value;
+            
+            const yamlEntry = `- name: "${name}"
+  slug: "${slug}"
+  layout: travel
+  type: physical
+  coords: [${coords[0]}, ${coords[1]}]
+  date: ${date}
+  content: |
+${content.split('\n').map(line => '    ' + line).join('\n')}`;
+            
+            const output = document.getElementById('output');
+            output.textContent = yamlEntry;
+            output.style.display = 'block';
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(yamlEntry).then(() => {
+                alert('YAML entry copied to clipboard! Add it to _data/travels.yml');
+            });
+        });
+        
+        // Auto-generate slug from name
+        document.getElementById('name').addEventListener('input', function() {
+            const slug = this.value.toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-|-$/g, '');
+            document.getElementById('slug').value = slug;
+        });
+    </script>
+</body>
+</html>

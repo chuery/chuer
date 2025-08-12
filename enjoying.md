@@ -7,7 +7,7 @@ the art of consumption
 
 ## Some Books I've Loved
 
-*Currently:* **Small Is Beautiful: Economics as if People Mattered**
+*Currently:* **边城, Crossroads: A Popular History of Malaysia and Singapore**
 
 - The Woman Destroyed – Simone de Beauvoir  
 - Norwegian Wood – Haruki Murakami  
@@ -25,6 +25,7 @@ the art of consumption
 - Nicomachean Ethics – Aristotle  
 - The Picture of Dorian Gray - Oscar Wilde  
 - Existentialism is a Humanism – Jean-Paul Sartre  
+
 ---
 
 ## Poetry
