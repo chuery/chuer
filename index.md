@@ -3,10 +3,6 @@ layout: default
 title: Home
 ---
 
-<div style="text-align: center; margin-bottom: 2rem;">
-  <strong>Maximizing the novel sensations I can experience in this lifetime!</strong>
-</div>
-
 <!-- First image-text pair -->
 <div style="display: flex; align-items: flex-start; max-width: 700px; gap: 20px; margin-bottom: 2rem;">
   <img src="{{ '/assets/dymaxion.jpg' | relative_url }}" alt="Dymaxion Map" style="width: 300px; flex-shrink: 0;">
