@@ -3,18 +3,18 @@ layout: default
 title: Home
 ---
 
-<div style="text-align: center; margin-top: 20px;">
-  Hi! I'm Chuer, a junior at Stanford interested in tech in sustainability & social impact.
-</div>
-
 <!-- First image-text pair -->
 <div style="display: flex; align-items: flex-start; max-width: 700px; gap: 20px; margin-bottom: 2rem;">
   <img src="{{ '/assets/dymaxion.jpg' | relative_url }}" alt="Dymaxion Map" style="width: 300px; flex-shrink: 0;">
 
   <p style="flex: 1; margin: 0;">
-    <strong>Thesis: Moral Ambition</strong><br><br>
-    My bias toward action stems from consciously prioritizing morality above beauty. Tech and entrepreneurship are the optimal and most practical paths to pursue my moral ambitions and self-actualization. I channel this philosophy through leadership in BASES, organizing for Stanford Climate Week, working with Stanford Sustainable Investment Group, and building projects like Havenlink and Project Kai. I am deeply inspired by Stanford & Structured Liberal Education alum Reid Hoffman.<br><br>
-    <em>Read more here</em>
+    <strong>Maximizing the novel sensations I can experience in this lifetime!</strong><br><br>
+    
+    Hi! I’m Chuer, a junior at Stanford majoring in Symbolic Systems with a concentration in Physics and a minor in Data Science. I’m passionate about energy and tech for sustainability +  how we can use tech for cool art!
+    
+    I'm currently helping plan Stanford Climate Week (October 20-26, 2025) and BASES Challenge (Jan - March 2026). I also conduct research with Cortico at the MIT Media Lab and write/edit for the Stanford Daily.
+    
+    Previously, I've worked against jail expansions with Decarcerate Sacramento, conducted hydrology fieldwork with the USGS, designed and created the initial prototype for a learning platform for students with intellectual developmental disorders at the Stanford GSE Lemons Lab. 
   </p>
 </div>
 
