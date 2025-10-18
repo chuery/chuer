@@ -27,7 +27,6 @@ Summer 2025 internship.
 
 - **Stanford Treehacks 2024: Edutain (2024)**
 Edutain is a learning platform that recommends only educational Youtube videos and uses AI to generate and embed checkpoint questions throughout the video. Learn more [here](https://devpost.com/software/edutain)
-  <img src="{{ '/assets/edutain.png' | relative_url }}" alt="Edutain" style="width: 500px; flex-shrink: 0;">
 
   Previous Criminal Justice Advocacy
 
