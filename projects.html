@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product | Chuer Yang</title>
+    <title>Projects | Chuer Yang</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
@@ -164,7 +164,60 @@
       text-decoration: none;
       border-bottom: 1px solid black;
     }
-    </style>
+    <style>
+    .card {
+        width: 100%;
+        max-width: 500px; /* Or whatever size you prefer */
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #555;
+        /* Optional: clamps text if it gets too long */
+    }
+
+    .video-container {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: none;
+    }
+    .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* This keeps everything inside */
+    }
+
+    .analysis-embed {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* Maintains 16:9 Aspect Ratio */
+        margin-top: 15px;
+        background: #f0f0f0;
+        border-radius: 8px;
+    }
+
+    .analysis-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+</style>
 </head>
 <body>
 
@@ -211,12 +264,19 @@
             <div class="card" onclick="openModal('chinatown')">
                 <span class="tag">Physical Interaction</span>
                 <h3>Chinatown Automata</h3>
-                <p>Cultural storytelling through mechanical narratives and manual interaction.</p>
+                <p>Cultural storytelling through mechanical narratives and manual interaction. 2024. </p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/oDFLLpGsvK0?si=PmSItqRtvXmbMReP" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="card" onclick="openModal('figma')">
                 <span class="tag">Experimental UI</span>
-                <h3>Surrealist Figma</h3>
-                <p>Exploring the intersection of "impossible" tools and creative interface design.</p>
+                <h3>Vending Dreams: Artistic Vision Glasses</h3>
+                <p>Designed using Figma and Prome AI. 2024.</p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/J9qt3GQFjWI" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="card" onclick="openModal('edutain')">
                 <span class="tag">TreeHacks</span>
@@ -234,15 +294,28 @@
                 <h3>Weee!</h3>
                 <p>RAG architecture and LLM-powered collection generation for e-commerce segments.</p>
             </div>
-            <div class="card" onclick="window.open('https://your-nlp-link.com', '_blank')">
-                <span class="tag">NLP Analysis</span>
-                <h3>Israel-Palestine Headlines</h3>
-                <p>Media framing and sentiment analysis across global news coverage.</p>
+            <div class="card">
+                <span class="tag">NLP / Data Analysis</span>
+                <h3>Israel-Palestine Headlines Analysis</h3>
+                <p>
+                    An NLP-driven exploration of media bias and sentiment trends in international headlines. 
+                    This project analyzes linguistic patterns and framing techniques used in conflict reporting.
+                </p>
+            
+                <div class="analysis-embed">
+                    <iframe 
+                        src="https://docs.google.com/presentation/d/e/2PACX-1vQyC8HmBYuuT0ere3W9_9hX-NPKcSS2goIzOqx-jGhgCk-1cDVUzKB8KFqFVVD974iIHNF2Abc75xDb/pubembed?start=false&loop=false&delayms=3000" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        mozallowfullscreen="true" 
+                        webkitallowfullscreen="true">
+                    </iframe>
+                </div>
             </div>
             <div class="card" onclick="openModal('dssi')">
-                <span class="tag">Policy Research</span>
-                <h3>DSSI Memos</h3>
-                <p>8 data-driven policy memos analyzing social institutions and platform mechanics.</p>
+                <span class="tag">Data-Driven Policy Memos</span>
+                <h3>Data-Driven Policy Memos</h3>
+                <p>data-driven policy memos analyzing social institutions and platform mechanics.</p>
             </div>
         </div>
     </div>
