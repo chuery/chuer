@@ -7,208 +7,126 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
-
     * { box-sizing: border-box; }
     body { 
       background-color: #fdf0e4; 
       font-family: 'Inter', sans-serif; 
       color: #1a1a1a; 
-      margin: 0; line-height: 1.6;
+      margin: 0; 
+      line-height: 1.6;
+      /* Removed overflow: hidden so mobile can scroll to footer/sidebar content */
     }
-
     
     .home-container { 
       position: relative; 
-      width: 100vw; 
-      height: 100vh; 
+      width: 100%; 
+      min-height: 100vh; 
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-       /* HORIZONTAL TOP-NAV */
-       .home-nav { 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 50px;
-            z-index: 2000; 
-            background: rgba(238, 244, 249, 0.85); /* Matches background with blur */
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .home-nav .brand a { 
-            font-weight: 900; 
-            font-size: 1.1rem; 
-            letter-spacing: 0.05em;
-            text-decoration: none;
-            color: #1a1a1a;
-        }
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-        .nav-links a { 
-            color: #1a1a1a; 
-            text-decoration: none; 
-            font-size: 0.85rem; 
-            border-bottom: 1px solid #1a1a1a;
-            transition: opacity 0.2s;
-        }
-        .nav-links a:hover { opacity: 0.6; }
-
-    /* LEFT SIDEBAR: COOL PEOPLE */
-    .cool-people {
-      position: fixed;
-      top: 100px; /* Adjusted to sit below nav */
-      left: 40px;
-      width: 180px;
-      z-index: 100;
-      font-size: 0.85rem;
+      padding: 100px 20px; /* Space for nav and footer */
     }
 
-    .cool-people h2 {
-      font-size: 0.9rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+    /* NAVIGATION */
+    .home-nav { 
+      position: fixed; top: 0; left: 0; width: 100%;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 5%; z-index: 2000; 
+      background: rgba(253, 240, 228, 0.9);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
+    .home-nav .brand a { font-weight: 900; font-size: 1.1rem; text-decoration: none; color: #1a1a1a; }
+    .nav-links { display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { color: #1a1a1a; text-decoration: none; font-size: 0.75rem; border-bottom: 1px solid #1a1a1a; }
 
-    .cool-people ul { list-style: none; padding: 0; margin: 0; }
-    .cool-people li { margin-bottom: 6px; }
-    .cool-people a {
-      color: black;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(0,0,0,0.2);
+    /* SIDEBARS */
+    .cool-people, .recently-section {
+      position: fixed; top: 100px; width: 180px; z-index: 100; font-size: 0.85rem;
     }
+    .cool-people { left: 40px; }
+    .recently-section { right: 40px; }
+    .cool-people h2, .recently-section h2 { font-size: 0.9rem; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
+    .cool-people ul { list-style: none; padding: 0; }
+    .cool-people li { margin-bottom: 4px; }
+    .cool-people a { color: black; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,0.1); }
 
-    /* RIGHT SIDEBAR: RECENTLY */
-    .recently-section {
-      position: fixed;
-      top: 100px; /* Adjusted to match left side */
-      right: 40px;
-      width: 200px;
-      z-index: 100;
-      font-size: 0.85rem;
-      text-align: left;
-    }
-
-    .recently-section h2 {
-      font-size: 0.9rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-    }
-
-    /* CENTERED MAP ANCHOR */
+    /* CENTERED CONTENT */
     .map-anchor { position: relative; width: 0; height: 0; }
-
     .page-title {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      font-size: 3.5rem;
-      font-weight: 900;
-      line-height: 0.85;
-      letter-spacing: -0.04em;
-      text-align: center;
-      z-index: 10;
-      white-space: nowrap;
-      text-transform: lowercase;
-      pointer-events: none;
+      position: absolute; transform: translate(-50%, -50%);
+      font-size: 3.5rem; font-weight: 900; line-height: 0.85;
+      text-align: center; z-index: 10; white-space: nowrap;
+      text-transform: lowercase; pointer-events: none;
     }
 
-    /* BLOB LOGIC */
-    .blob-wrapper {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-      cursor: pointer;
-      z-index: 20;
-    }
+    /* BLOBS */
+    .blob-wrapper { position: absolute; transform: translate(-50%, -50%); transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; z-index: 20; }
+    .blob-wrapper.collapsed { width: 220px; height: 220px; }
+    .blob-wrapper.expanded { position: fixed; top: 50% !important; left: 50% !important; width: 90vw; height: 90vh; z-index: 1000; cursor: default; }
+    .blob-bg { position: absolute; width: 100%; height: 100%; z-index: -1; filter: blur(8px); opacity: 0.65; mix-blend-mode: multiply; transition: all 0.6s ease; }
 
-    .blob-wrapper.collapsed { width: 260px; height: 260px; }
-    .blob-wrapper.expanded {
-      position: fixed;
-      top: 50% !important;
-      left: 50% !important;
-      width: 80vw;
-      height: 85vh;
-      z-index: 1000;
-      cursor: default;
-    }
-
-    .blob-bg {
-      position: absolute;
-      width: 100%; height: 100%;
-      z-index: -1;
-      filter: blur(8px);
-      opacity: 0.65;
-      mix-blend-mode: multiply;
-      transition: all 0.6s ease;
-    }
-
-    .full-content { display: none; padding: 60px; overflow-y: auto; height: 100%; }
-    .blob-wrapper.expanded .full-content { display: block; }
-    .blob-wrapper.expanded .preview-label { display: none; }
-
-    .preview-label { font-weight: 900; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
-
-    /* INDIVIDUAL BLOB POSITIONS */
-    .books { top: -120px; left: -160px; }
+    /* INDIVIDUAL POSITIONS (Desktop) */
+    .books { top: -140px; left: -140px; }
     .books .blob-bg { background: #e6a4a4; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-    .books.collapsed { width: 280px; }
-
-    .maps { top: -120px; left: 160px; }
+    .maps { top: -120px; left: 140px; }
     .maps .blob-bg { background: #f2e18d; border-radius: 43% 57% 41% 59% / 46% 62% 38% 54%; }
-
     .art { top: 140px; left: -140px; }
     .art .blob-bg { background: #ffffff; opacity: 0.5; border-radius: 50% 50% 40% 60% / 40% 60% 40% 60%; }
-
-    .podcasts { top: 180px; left: 140px; }
+    .podcasts { top: 160px; left: 140px; }
     .podcasts .blob-bg { background: #a4b6c6; border-radius: 30% 70% 70% 30% / 50%; }
 
-    /* GRID & TEXT */
-    .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
-    h2 { font-size: 1.8rem; margin-top: 0; font-weight: 900; }
-    h3 { font-size: 1.1rem; margin-top: 25px; border-bottom: 1px solid rgba(0,0,0,0.1); }
-    ul { list-style: none; padding: 0; line-height: 1.8; font-size: 0.95rem; }
-    
-    .close-btn {
-      display: none; position: absolute; top: 20px; right: 30px; 
-      font-weight: 900; cursor: pointer; font-size: 1.2rem;
-    }
+    /* CONTENT INSIDE BLOB */
+    .full-content { display: none; padding: 40px 20px; overflow-y: auto; height: 100%; }
+    .blob-wrapper.expanded .full-content { display: block; }
+    .preview-label { font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; }
+    .two-column-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    .close-btn { display: none; position: absolute; top: 20px; right: 20px; font-weight: 900; cursor: pointer; z-index: 1100; }
     .blob-wrapper.expanded .close-btn { display: block; }
 
-    #overlay {
-      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-      background: rgba(253, 240, 228, 0.8); backdrop-filter: blur(5px);
-      display: none; z-index: 900;
-    }
+    #overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(253, 240, 228, 0.8); backdrop-filter: blur(5px); display: none; z-index: 900; }
+    .footer { position: relative; padding: 40px 20px; font-size: 0.8rem; text-align: center; width: 100%; }
 
-    .footer { position: fixed; bottom: 30px; left: 30px; z-index: 100; font-size: 0.8rem; }
-    .footer a { color: black; text-decoration: none; border-bottom: 1px solid black; }
+    /* --- MOBILE BREAKPOINT --- */
+    @media (max-width: 768px) {
+      body { overflow-y: auto; }
+      .home-container { height: auto; padding-top: 150px; flex-direction: column; }
+      
+      .page-title { font-size: 2.2rem; }
+
+      /* Stack sidebars at the bottom */
+      .cool-people, .recently-section { position: relative; top: auto; left: auto; right: auto; width: 90%; margin: 20px auto; }
+      
+      /* Scale Blobs so they don't fly off screen */
+      .blob-wrapper.collapsed { width: 150px; height: 150px; }
+      .books { top: -110px; left: -80px; }
+      .maps { top: -100px; left: 80px; }
+      .art { top: 90px; left: -80px; }
+      .podcasts { top: 100px; left: 80px; }
+      
+      .two-column-grid { grid-template-columns: 1fr; }
+      .home-nav { flex-direction: column; gap: 10px; padding: 15px; }
+      .nav-links { justify-content: center; gap: 10px; }
+    }
   </style>
 </head>
 <body>
 
 <div id="overlay"></div>
 
-<div class="home-container">
-    <nav class="home-nav">
-        <div class="brand"><a href="index.html">CHUER YANG</a></div>
-        <div class="nav-links">
-            <a href="projects.html">projects</a>
-            <a href="sustainability.html">sustainability</a>
-            <a href="writing.html">writing</a>
-            <a href="enjoying.html">enjoying</a>
-            <a href="beyond.html">& beyond</a>
-        </div>
-      </nav>
+<nav class="home-nav">
+    <div class="brand"><a href="index.html">CHUER YANG</a></div>
+    <div class="nav-links">
+        <a href="projects.html">projects</a>
+        <a href="sustainability.html">sustainability</a>
+        <a href="writing.html">writing</a>
+        <a href="enjoying.html">enjoying</a>
+        <a href="beyond.html">& beyond</a>
+    </div>
+</nav>
 
+<div class="home-container">
     <div class="cool-people">
         <h2>Cool People</h2>
         <ul>
@@ -217,22 +135,8 @@
             <li><a href="https://arielrubinstein.tau.ac.il/" target="_blank">Ariel Rubinstein</a></li>
             <li><a href="https://marketdesigner.blogspot.com/" target="_blank">Alvin Roth</a></li>
             <li><a href="https://www.williammacaskill.com/" target="_blank">William Macaskill</a></li>
-            <li><a href="https://www.davepagurek.com/" target="_blank">Dave Pagurek</a></li>
-            <li><a href="https://steveblank.com/" target="_blank">Steve Blank</a></li>
-            <li><a href="https://jamesbuckhouse.com/" target="_blank">James Buckhouse</a></li>
-            <li><a href="https://www.davidrumsey.com/" target="_blank">David Rumsey</a></li>
-            <li><a href="https://dll110.github.io/" target="_blank">Diana Leung</a></li>
-            <li><a href="https://www.e-balogun.com/" target="_blank">Emmanuel Balogun</a></li>
             <li><a href="https://nathanzhao.cc/" target="_blank">Nathan Zhao</a></li>
         </ul>
-    </div>
-
-    <div class="recently-section">
-        <h2>RECENTLY</h2>
-        <p><strong>Currently:</strong></p>
-        <p>→ <em>Zen and the Art of Motorcycle Maintenance</em></p>
-        <p>→ The Short Stories of Chekhov</p>
-        <p>→ <em>Siddhartha</em> – Hermann Hesse</p>
     </div>
 
     <div class="map-anchor">
@@ -241,31 +145,21 @@
         <div class="blob-wrapper collapsed books" onclick="expandBlob(this)">
             <div class="blob-bg"></div>
             <div class="close-btn" onclick="closeBlob(event, this.parentElement)">✕</div>
-            <div class="preview-label">Literature & Poetry</div>
+            <div class="preview-label">Literature</div>
             <div class="full-content">
-                <h2>LITERATURE & POETRY</h2>
+                <h2>LITERATURE</h2>
                 <div class="two-column-grid">
                     <div class="column">
-                        <h3>Books I've Loved</h3>
+                        <h3>Books</h3>
                         <ul>
-                            <li>The Woman Destroyed – <strong>Simone de Beauvoir</strong></li>
-                            <li>Norwegian Wood – <strong>Haruki Murakami</strong></li>
-                            <li>故乡 – <strong>鲁迅</strong></li>
-                            <li>The Decay of Lying – <strong>Oscar Wilde</strong></li>
-                            <li>The Book of Disquiet – <strong>Fernando Pessoa</strong></li>
-                            <li>Immortality – <strong>Milan Kundera</strong></li>
+                            <li>The Woman Destroyed – <strong>Beauvoir</strong></li>
+                            <li>Norwegian Wood – <strong>Murakami</strong></li>
                         </ul>
                     </div>
                     <div class="column">
                         <h3>Poetry</h3>
                         <ul>
-                            <li><em>Odes</em> – <strong>Fernando Pessoa</strong></li>
-                            <li><em>Aedh Wishes</em> – <strong>W.B. Yeats</strong></li>
-                        </ul>
-                        <h3 style="margin-top: 30px;">Pillars of Thought</h3>
-                        <ul>
-                            <li>Meditations – <strong>Descartes</strong></li>
-                            <li>Nicomachean Ethics – <strong>Aristotle</strong></li>
+                            <li><em>Odes</em> – <strong>Pessoa</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -278,22 +172,7 @@
             <div class="preview-label">Maps</div>
             <div class="full-content">
                 <h2>CARTOGRAPHY</h2>
-                <div class="two-column-grid">
-                    <div class="column">
-                        <p>Thanks to Professor Wigen and David Rumsey.</p>
-                        <h3>Foundations</h3>
-                        <ul>
-                            <li><a href="https://www.davidrumsey.com/" target="_blank">Rumsey Map Collection</a></li>
-                            <li><a href="http://radicalcartography.net" target="_blank">Radical Cartography</a></li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h3>Selected Works</h3>
-                        <ul>
-                            <li><a href="https://searchworks.stanford.edu/view/nr407tj3054" target="_blank">Lisbon 1636</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <p>David Rumsey Map Collection & Radical Cartography.</p>
             </div>
         </div>
 
@@ -305,7 +184,6 @@
                 <h2>ART</h2>
                 <ul>
                     <li>Landscape with the Fall of Icarus - <strong>Bruegel</strong></li>
-                    <li>Water Lilies - <strong>Monet</strong></li>
                 </ul>
             </div>
         </div>
@@ -313,25 +191,18 @@
         <div class="blob-wrapper collapsed podcasts" onclick="expandBlob(this)">
             <div class="blob-bg"></div>
             <div class="close-btn" onclick="closeBlob(event, this.parentElement)">✕</div>
-            <div class="preview-label">Digital & Misc</div>
+            <div class="preview-label">Digital</div>
             <div class="full-content">
-                <h2>DIGITAL & MISC</h2>
-                <div class="two-column-grid">
-                    <div class="column">
-                        <h3>Tech & Systems</h3>
-                        <ul>
-                            <li><a href="https://payloadspace.com/" target="_blank">Payload Space</a></li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h3>Curiosities</h3>
-                        <ul>
-                            <li><a href="https://entitledopinions.stanford.edu/" target="_blank">Entitled Opinions</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <h2>DIGITAL</h2>
+                <p>Payload Space & Entitled Opinions.</p>
             </div>
         </div>
+    </div>
+
+    <div class="recently-section">
+        <h2>RECENTLY</h2>
+        <p>→ <em>Zen and the Art of Motorcycle Maintenance</em></p>
+        <p>→ The Short Stories of Chekhov</p>
     </div>
 </div>
 
@@ -347,6 +218,8 @@
     document.getElementById('overlay').style.display = 'block';
     el.classList.remove('collapsed');
     el.classList.add('expanded');
+    // Disable body scroll when expanded
+    document.body.style.overflow = 'hidden';
   }
 
   function closeBlob(event, el) {
@@ -354,6 +227,8 @@
     document.getElementById('overlay').style.display = 'none';
     el.classList.remove('expanded');
     el.classList.add('collapsed');
+    // Re-enable body scroll
+    document.body.style.overflow = 'auto';
   }
 </script>
 
