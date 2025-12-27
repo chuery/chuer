@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sustainability | chuer yang</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    * { box-sizing: border-box; }
+    body { 
+      background-color: #f1f3ee; /* light sage green / stone */
+      font-family: 'Inter', sans-serif; 
+      color: #2d342d; /* deep moss grey for text */
+      margin: 0; 
+    }
+
+       /* HORIZONTAL TOP-NAV */
+       .home-nav { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            z-index: 2000; 
+            background: rgba(238, 244, 249, 0.85); /* Matches background with blur */
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .home-nav .brand a { 
+            font-weight: 900; 
+            font-size: 1.1rem; 
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links a { 
+            color: #1a1a1a; 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            border-bottom: 1px solid #1a1a1a;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover { opacity: 0.6; }
+
+
+    .container { 
+        max-width: 1100px; margin: 0 auto; padding: 160px 50px 100px 50px;
+        display: grid; grid-template-columns: 1.6fr 1fr; gap: 80px;
+    }
+
+    /* main column: research & physics */
+    h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: -0.04em; margin-bottom: 60px; text-transform: lowercase; color: #1a1a1a; }
+    
+    .section-label { font-family: 'JetBrains Mono'; font-size: 0.65rem; color: #8a968a; text-transform: uppercase; letter-spacing: 0.3em; margin-bottom: 30px; display: block; }
+
+    .work-block { margin-bottom: 50px; padding-bottom: 40px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .work-header { margin-bottom: 15px; }
+    .work-header h2 { font-size: 1.4rem; font-weight: 800; margin: 0 0 5px 0; text-transform: lowercase; }
+    .work-header .org { font-family: 'JetBrains Mono'; color: #5e6d5e; font-size: 0.8rem; font-weight: 700; text-transform: lowercase; }
+    .work-header .date { font-size: 0.8rem; color: #8a968a; margin-top: 5px; font-weight: 500; }
+
+    .work-content p { line-height: 1.6; color: #3e473e; font-size: 0.95rem; margin-bottom: 15px; }
+    .stack { font-family: 'JetBrains Mono'; font-size: 0.7rem; color: #8a968a; text-transform: lowercase; }
+
+    /* sidebar: fusion & events */
+    .sidebar { position: sticky; top: 160px; height: fit-content; }
+    
+    .flick-box { 
+        width: 100%; aspect-ratio: 4/5; background: #e6e9e0; border-radius: 24px; 
+        margin-bottom: 25px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    }
+    .flick-box img { width: 100%; height: 100%; object-fit: cover; }
+
+    .sidebar-card { background: #fafaf9; padding: 30px; border-radius: 24px; margin-bottom: 20px; border: 1px solid #e2e6dd; }
+    .sidebar-card h3 { font-size: 1rem; font-weight: 800; margin: 0 0 10px 0; text-transform: lowercase; }
+    .sidebar-card p { font-size: 0.85rem; color: #5e6d5e; line-height: 1.5; margin: 0; }
+    .fusion-accent { color: #4a5d4a; font-weight: 700; }
+
+    @media (max-width: 900px) {
+        .container { grid-template-columns: 1fr; }
+        .sidebar { position: static; margin-top: 60px; padding-top: 60px; border-top: 1px solid rgba(0,0,0,0.1); }
+        h1 { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="home-nav">
+  <div class="brand"><a href="index.html">CHUER YANG</a></div>
+  <div class="nav-links">
+      <a href="projects.html">projects</a>
+      <a href="sustainability.html">sustainability</a>
+      <a href="writing.html">writing</a>
+      <a href="enjoying.html">enjoying</a>
+      <a href="beyond.html">& beyond</a>
+  </div>
+</nav>
+
+<div class="container">
+    
+    <div class="main-work">
+        <h1>sustainability</h1>
+
+        <div class="work-block">
+            <div class="work-header">
+                <h2>hollberg lab</h2>
+                <div class="org">hansen experimental physics lab</div>
+                <div class="date">2024 — present</div>
+            </div>
+            <div class="work-content">
+                <p>developing computational modeling for open-path spectroscopy. i program and deploy raspberry pi–based data acquisition pipelines on linux for laser-based methane instrumentation in field conditions at jasper ridge.</p>
+                <div class="stack">python / jupyter / linux / spectroscopy</div>
+            </div>
+        </div>
+
+        <div class="work-block">
+            <div class="work-header">
+                <h2>cortico</h2>
+                <div class="org">mit media lab</div>
+                <div class="date">july 2025 — present</div>
+            </div>
+            <div class="work-content">
+                <p>conducting large-scale analysis of climate-focused conversational datasets. bridging community perspectives through data-driven narrative analysis of environmental sentiment.</p>
+                <div class="stack">nlp / data analysis / research</div>
+            </div>
+        </div>
+
+        <div class="work-block">
+            <div class="work-header">
+                <h2>sustainable investment group</h2>
+                <div class="org">investment analyst</div>
+                <div class="date">march 2025 — present</div>
+            </div>
+            <div class="work-content">
+                <p>technical due diligence on fission and fusion startups. identifying high-beta spotlight companies to advise the westly group on strategic energy venture capital.</p>
+                <div class="stack">due diligence / energy vc / fusion tech</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <span class="section-label">ecosystem</span>
+        
+        <div class="flick-box">
+            <img src="assets/flick.jpg" alt="chuer hosting cfs cto">
+        </div>
+
+        <div class="sidebar-card">
+            <h3>stanford climate week</h3>
+            <p>hosted the <span class="fusion-accent">cto of commonwealth fusion systems</span> to discuss the commercialization of magnetic confinement and the future of star-power on the grid.</p>
+        </div>
+
+        <div class="sidebar-card">
+            <h3>green ai institute</h3>
+            <p>white paper researcher assessing fission and fusion scalability for global data center siting policy.</p>
+        </div>
+
+        <div class="sidebar-card">
+            <h3>usgs</h3>
+            <p>hydrology fieldwork in the san joaquin delta, monitoring water quality and analyzing drought impacts on regional ecosystems.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

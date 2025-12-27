@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+    body { 
+      background-color: #fdf0e4; 
+      font-family: 'Inter', sans-serif; 
+      color: #1a1a1a; 
+      margin: 0; 
+      overflow: hidden; 
+    }
+    
+    .home-container { 
+      position: relative; 
+      width: 100vw; 
+      height: 100vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* CENTERED ANCHOR - This keeps the map from breaking */
+    .map-anchor {
+      position: relative;
+      width: 0;
+      height: 0;
+    }
+
+    .home-name-large {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      font-size: 4rem; /* Slightly smaller for better proportions */
+      font-weight: 900;
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      text-align: center;
+      z-index: 100;
+      white-space: nowrap;
+    }
+
+    /* SMALLER BLOB ENGINE */
+    .blob-container {
+      position: absolute;
+      width: 280px;  /* Reduced from 450px to make them smaller */
+      height: 280px; /* Reduced from 400px */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      transform: translate(-50%, -50%);
+    }
+
+    .blob-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(6px); /* Sharp enough to see the shape, soft enough to be a 'blob' */
+      opacity: 0.65;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    /* THE RIGHT LOCATIONS (Relative to center) */
+    /* Thesis: Top-Left */
+    .thesis-blob { top: -140px; left: -140px; padding-left: 50px; padding-right: 50px; }
+    .thesis-blob .blob-bg { 
+      background: #e6a4a4; 
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+    }
+    .thesis-blob .content { transform: translateY(-20px); }
+
+    /* Sustainability: Right */
+    .sustainability-blob { top: 10px; left: 200px; padding-right: 40px; }
+    .sustainability-blob .blob-bg { 
+      background: #f2e18d; 
+      border-radius: 43% 60% 70% 59% / 46% 62% 38% 54%; 
+    }
+
+    /* Misc: Left */
+    .misc-blob { top: 100px; left: -180px; z-index: 40; }
+    .misc-blob .blob-bg { 
+      background: #ffffff; 
+      opacity: 0.4; 
+      border-radius: 90% 40% 70% 10% / 40% 60% 90% 90%;
+    }
+    .misc-blob .content { transform: translateX(-10px); }
+
+    /* Product: Bottom-Right */
+    .product-blob { top: 160px; left: 40px; }
+    .product-blob .blob-bg { 
+      background: #a4b6c6; 
+      border-radius: 30% 70% 70% 30% / 50%; 
+    }
+    .product-blob h2 { margin-top: -10px; }
+
+    /* Content Styling */
+    h2 { font-size: 1rem; margin-bottom: 4px; font-weight: 900; }
+    p { font-size: 0.75rem; line-height: 1.3; margin: 0; }
+    .thesis-blob p { font-size: 0.7rem; line-height: 1.4; }
+    .sustainability-blob .content { transform: translateY(-10px); }
+    .sustainability-blob h2 { transform: translate(15px, -10px); }
+    .sustainability-blob p { font-size: 0.7rem; line-height: 1.4; transform: translate(30px, -10px); }
+    
+    /* SIDEBARS */
+    .home-nav, .recently-section {
+      position: fixed;
+      top: 40px;
+      z-index: 100;
+      width: 200px;
+    }
+    .home-nav { left: 40px; }
+    .recently-section { right: 40px; font-size: 0.85rem; }
+    .home-nav a { display: block; margin: 8px 0; color: black; text-decoration: none; border-bottom: 1px solid black; width: fit-content; }
+    
+    /* FOOTER */
+    .footer {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      z-index: 100;
+      font-size: 0.8rem;
+    }
+    .footer a {
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+<div class="home-container">
+  <nav class="home-nav">
+    <div style="font-weight: 900; margin-bottom: 20px;"><a href="/chuer/">CHUER YANG</a></div>
+    <a href="/chuer/projects.html">projects</a>
+    <a href="/chuer/sustainability.html">sustainability</a>
+    <a href="/chuer/writing.html">writing</a>
+    <a href="/chuer/enjoying.html">enjoying</a>
+    <a href="/chuer/beyond.html">& beyond</a>
+  </nav>
+
+  <div class="map-anchor">
+    <div class="home-name-large">CHUER<br>YANG</div>
+
+    <div class="blob-container thesis-blob">
+      <div class="blob-bg"></div>
+      <div class="content">
+        <h2>THESIS</h2>
+        <p>Junior at Stanford studying <br>
+        <strong>Symbolic Systems + Physics</strong>.</p>
+        <p>Passionate about systems-level problem-solving 
+        <br> 
+        & the frontiers of tech + sustainability</p>
+      </div>
+    </div>
+
+    <div class="blob-container sustainability-blob">
+      <div class="blob-bg"></div>
+      <div class="content">
+        <h2>SUSTAINABILITY</h2>
+        <p>working towards a future<br>of <strong>energy abundance</strong>
+            <br>
+            <br>expanding the <strong>nuclear ecosystem</strong><br>
+        @ Stanford</p>
+      </div>
+    </div>
+
+    <div class="blob-container misc-blob">
+      <div class="blob-bg"></div>
+      <div class="content">
+        <h2>MISC</h2>
+        <p><a href="/chuer/writing.html">→ writing</a></p>
+        <p><a href="/chuer/enjoying.html">→ enjoying</a></p>
+        <p><a href="/chuer/beyond.html">→ &beyond</a></p>
+      </div>
+    </div>
+
+    <div class="blob-container product-blob">
+      <div class="blob-bg"></div>
+      <div class="content">
+        <h2>PRODUCT</h2>
+        <p>combining <strong>data</strong> + <strong>design</strong> </p>
+        <p>to create<br><a href="/projects.html/">→ projects</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="recently-section">
+    <h2 style="font-size: 0.9rem;">RECENTLY</h2>
+    <br>
+    <p><strong>Researching</strong></p>
+    <p>→laser systems for methane measurement @ Stanford Hansen Experimental Physics Lab</p>
+    <p>→ coastal climate narratives with Cortico @ MIT Media Lab</p>
+    <br>
+    <p></p>
+    <p><strong>Organizing</strong></p>
+    <p>→ BASES $140K Challenge</p>
+    <p>→ Stanford Climate Week</p>
+    <br>
+    <p>exploring Thailand, reading <u>Zen and the Art of Motorcycle Maintenance</u>, & more</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <a href="https://www.linkedin.com/in/chuer-yang-1b8026242/" target="_blank">linkedin</a> | 
+  <a href="https://github.com/chuery" target="_blank">github</a> | 
+  chuer [at] stanford [dot] edu
+</footer>
+
+</body>
+</html>

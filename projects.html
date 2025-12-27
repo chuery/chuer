@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Chuer Yang</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+        * { box-sizing: border-box; }
+        body { 
+            background-color: #eef4f9; /* Soft Light Blue Background */
+            font-family: 'Inter', sans-serif; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* HORIZONTAL TOP-NAV */
+        .home-nav { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            z-index: 2000; 
+            background: rgba(238, 244, 249, 0.85); /* Matches background with blur */
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .home-nav .brand a { 
+            font-weight: 900; 
+            font-size: 1.1rem; 
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links a { 
+            color: #1a1a1a; 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            border-bottom: 1px solid #1a1a1a;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover { opacity: 0.6; }
+
+        /* MAIN CONTAINER */
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 160px 40px 100px 40px; 
+        }
+
+        /* HEADER */
+        .header-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 80px;
+        }
+        h1 { 
+            font-size: 4.5rem; 
+            font-weight: 900; 
+            letter-spacing: -0.05em; 
+            margin: 0;
+            text-align: right;
+            line-height: 0.9;
+            text-transform: lowercase;
+        }
+
+        /* SECTIONS */
+        .section-group { margin-bottom: 100px; }
+        .section-label { 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: 0.15em; 
+            font-size: 0.75rem; 
+            margin-bottom: 30px; 
+            opacity: 0.4;
+            display: flex;
+            align-items: center;
+        }
+        .section-label::after {
+            content: ""; flex: 1; height: 1px; background: currentColor; margin-left: 20px; opacity: 0.2;
+        }
+
+        /* GRID */
+        .project-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+            gap: 30px; 
+        }
+
+        /* SOFT RECTANGLE CARDS */
+        .card { 
+            background: rgba(255, 255, 255, 0.5); 
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 32px; 
+            padding: 40px; 
+            cursor: pointer; 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover { 
+            transform: translateY(-8px); 
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+        }
+        .card .tag { 
+            font-size: 0.65rem; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            color: #6a8ba7; /* Muted blue tag */
+            margin-bottom: 15px;
+        }
+        .card h3 { margin: 0 0 12px 0; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; }
+        .card p { font-size: 0.95rem; margin: 0; color: #444; line-height: 1.5; }
+
+        /* MODAL */
+        .modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(238, 244, 249, 0.9); 
+            z-index: 3000; overflow-y: auto;
+            backdrop-filter: blur(20px);
+        }
+        .modal-content { 
+            max-width: 800px; 
+            margin: 80px auto; 
+            padding: 60px; 
+            background: white; 
+            border-radius: 40px;
+            position: relative;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+        }
+        .modal-body h2 { font-size: 3.5rem; font-weight: 900; letter-spacing: -0.04em; margin-bottom: 20px; }
+        .close-modal { position: fixed; top: 30px; right: 40px; font-size: 2rem; cursor: pointer; font-weight: 900; z-index: 3100; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .home-nav { padding: 20px; flex-direction: column; gap: 10px; }
+            .nav-links { gap: 15px; font-size: 0.75rem; }
+            .header-wrapper { justify-content: flex-start; }
+            h1 { text-align: left; }
+        }
+        /* FOOTER */
+    .footer {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      z-index: 100;
+      font-size: 0.8rem;
+    }
+    .footer a {
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+
+<nav class="home-nav">
+    <div class="brand"><a href="/chuer/">CHUER YANG</a></div>
+    <div class="nav-links">
+        <a href="projects.html">projects</a>
+        <a href="sustainability.html">sustainability</a>
+        <a href="writing.html">writing</a>
+        <a href="enjoying.html">enjoying</a>
+        <a href="beyond.html">& beyond</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="header-wrapper">
+        <h1>projects</h1>
+    </div>
+
+    <div class="section-group">
+        <div class="section-label">01. AI & Product</div>
+        <div class="project-grid">
+            <div class="card" onclick="openModal('aisera')">
+                <span class="tag">PM Intern • Summer 2025</span>
+                <h3>Aisera</h3>
+                <p>Developing ITSM AI agents and translating 30k+ data points into product roadmaps.</p>
+            </div>
+            <div class="card" onclick="openModal('havenlink')">
+                <span class="tag">AI Strategy</span>
+                <h3>Havenlink</h3>
+                <p>Connecting housing, transport, and food resources via AI for homeless populations.</p>
+            </div>
+            <div class="card" onclick="openModal('project-kai')">
+                <span class="tag">Stanford HAI Grant</span>
+                <h3>Project Kai</h3>
+                <p>AI-driven literacy platform designed for students with intellectual disabilities.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-group">
+        <div class="section-label">02. Design</div>
+        <div class="project-grid">
+            <div class="card" onclick="openModal('chinatown')">
+                <span class="tag">Physical Interaction</span>
+                <h3>Chinatown Automata</h3>
+                <p>Cultural storytelling through mechanical narratives and manual interaction.</p>
+            </div>
+            <div class="card" onclick="openModal('figma')">
+                <span class="tag">Experimental UI</span>
+                <h3>Surrealist Figma</h3>
+                <p>Exploring the intersection of "impossible" tools and creative interface design.</p>
+            </div>
+            <div class="card" onclick="openModal('edutain')">
+                <span class="tag">TreeHacks</span>
+                <h3>Edutain</h3>
+                <p>A learning platform that embeds AI checkpoints into YouTube's educational content.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-group">
+        <div class="section-label">03. Data</div>
+        <div class="project-grid">
+            <div class="card" onclick="openModal('weee')">
+                <span class="tag">ML Intern • Summer 2024</span>
+                <h3>Weee!</h3>
+                <p>RAG architecture and LLM-powered collection generation for e-commerce segments.</p>
+            </div>
+            <div class="card" onclick="window.open('https://your-nlp-link.com', '_blank')">
+                <span class="tag">NLP Analysis</span>
+                <h3>Israel-Palestine Headlines</h3>
+                <p>Media framing and sentiment analysis across global news coverage.</p>
+            </div>
+            <div class="card" onclick="openModal('dssi')">
+                <span class="tag">Policy Research</span>
+                <h3>DSSI Memos</h3>
+                <p>8 data-driven policy memos analyzing social institutions and platform mechanics.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="projectModal" class="modal" onclick="closeModal()">
+    <span class="close-modal" onclick="closeModal()">✕</span>
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div id="modalBody" class="modal-body"></div>
+    </div>
+</div>
+
+<script>
+    const projectData = {
+        'aisera': {
+            title: 'Aisera',
+            content: `<ul>
+                <li>Built conversational ITSM AI agent to auto-generate knowledge base articles.</li>
+                <li>Reduced manual workload by 85% through Jira/G-Drive centralization.</li>
+                <li>Presented CRI analysis for the 2024 fiscal year to Product/Eng VPs.</li>
+            </ul>`
+        },
+        'weee': {
+            title: 'Weee!',
+            content: `<ul>
+                <li>Spearheaded Korean Auto Collection project using LLMs and vector embeddings.</li>
+                <li>Improved collection generation efficiency by 87%.</li>
+                <li>Designed chain-of-thought prompting for RAG (Mandarin Chinese context).</li>
+            </ul>`
+        },
+        'chinatown': {
+            title: 'Chinatown Automata',
+            content: `<p>A mechanical narrative project exploring cultural heritage through tactile interaction. This project focuses on the physical-to-digital translation of storytelling.</p>`
+        },
+        'project-kai': {
+            title: 'Project Kai',
+            content: `<p>Worked under Professor Christopher Lemons on an AI reading platform for students with IDD. Conducted testing across the Fremont school district.</p>`
+        },
+        'havenlink': {
+            title: 'Havenlink',
+            content: `<p>A Stanford Google Developer Group project. Leveraged AI to centralize resource mapping for vulnerable populations.</p>`
+        },
+        'figma': {
+            title: 'Surrealist Figma',
+            content: `<p>Experimental interaction design suite focused on surrealist automata and creative tool development.</p>`
+        },
+        'edutain': {
+            title: 'Edutain',
+            content: `<p>Award-winning TreeHacks project. AI generates and embeds checkpoint questions into educational content.</p>`
+        },
+        'dssi': {
+            title: 'DSSI Memos',
+            content: `<p>Series of 8 memos analyzing social institutions through a data-driven lens.</p>`
+        }
+    };
+
+    function openModal(id) {
+        const data = projectData[id];
+        if (!data) return;
+        document.getElementById('modalBody').innerHTML = `
+            <h2>${data.title}</h2>
+            <div style="margin-top:20px; line-height:1.7;">${data.content}</div>
+        `;
+        document.getElementById('projectModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('projectModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+</script>
+<footer class="footer">
+  <a href="https://www.linkedin.com/in/chuer-yang-1b8026242/" target="_blank">linkedin</a> | 
+  <a href="https://github.com/chuery" target="_blank">github</a> | 
+  chuer [at] stanford [dot] edu
+</footer>
+</body>
+</html>

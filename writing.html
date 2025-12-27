@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinking | Chuer Yang</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+        * { box-sizing: border-box; }
+        body { 
+            background-color: #f9f7f2; 
+            font-family: 'Inter', sans-serif; 
+            color: #1a1a1a; 
+            margin: 0; padding: 0;
+        }
+
+       /* HORIZONTAL TOP-NAV */
+       .home-nav { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            z-index: 2000; 
+            background: rgba(238, 244, 249, 0.85); /* Matches background with blur */
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .home-nav .brand a { 
+            font-weight: 900; 
+            font-size: 1.1rem; 
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links a { 
+            color: #1a1a1a; 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            border-bottom: 1px solid #1a1a1a;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover { opacity: 0.6; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 160px 40px 100px 40px; }
+
+        /* HEADER */
+        .header-wrapper { display: flex; justify-content: flex-end; margin-bottom: 80px; }
+        h1 { font-size: 4.5rem; font-weight: 900; text-align: right; line-height: 0.9; text-transform: lowercase; margin: 0; }
+
+        /* NOBEL SHOUTOUT */
+        .shoutout-card {
+            background: #fff; border-left: 5px solid #e6a4a4; padding: 40px;
+            border-radius: 0 32px 32px 0; margin-bottom: 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .shoutout-card p { font-family: 'Lora', serif; font-size: 1.3rem; margin: 0; font-style: italic; }
+        .shoutout-card .source { margin-top: 15px; font-size: 0.9rem; font-weight: 700; opacity: 0.6; }
+
+        /* ARTICLE LIST */
+        .section-label { font-weight: 900; text-transform: uppercase; font-size: 0.7rem; opacity: 0.4; letter-spacing: 0.1em; margin-bottom: 30px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; }
+        
+        .article-list { margin-bottom: 80px; }
+        .article-item {
+            display: block; text-decoration: none; color: inherit;
+            padding: 25px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .article-item:hover { transform: translateX(10px); color: #e6a4a4; }
+        .article-item h3 { margin: 0 0 8px 0; font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; }
+        .article-item p { margin: 0; font-size: 0.95rem; color: #555; font-family: 'Lora', serif; line-height: 1.5; }
+
+        /* POETRY SECTION */
+        .poetry-section { 
+            background: rgba(230, 164, 164, 0.05); 
+            padding: 60px 40px; border-radius: 40px; 
+            text-align: center; margin-top: 40px;
+        }
+        .poem-snippet { font-family: 'Lora', serif; font-style: italic; font-size: 1.1rem; line-height: 1.8; color: #444; max-width: 500px; margin: 0 auto; }
+
+        @media (max-width: 768px) { h1 { font-size: 3rem; } .container { padding-top: 120px; } }
+    </style>
+</head>
+<body>
+
+<nav class="home-nav">
+    <div class="brand"><a href="/chuer/">CHUER YANG</a></div>
+    <div class="nav-links">
+        <a href="projects.html">projects</a>
+        <a href="sustainability.html">sustainability</a>
+        <a href="writing.html">writing</a>
+        <a href="enjoying.html">enjoying</a>
+        <a href="beyond.html">& beyond</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="header-wrapper">
+        <h1>writing</h1>
+    </div>
+
+    <div class="shoutout-card">
+        <p>"Ariel Rubinstein and coffee culture: a nice column by Stanford student Chuer Yang."</p>
+        <div class="source">
+            — Nobel Laureate <a href="https://marketdesigner.blogspot.com/2025/05/ariel-rubinstein-and-coffee-culture.html" target="_blank" style="color:inherit;">Alvin Roth</a>
+        </div>
+    </div>
+
+    <span class="section-label">Theory & Frameworks</span>
+    <div class="article-list">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vQ6wG_IbWaraxD78ptymF9yRNM7nH4Snn4ngiM_i3mKlgmPBlj2ZoF29vsdzDBXEinR2bJfmzyt8Y34/pub" class="article-item" target="_blank">
+            <h3>Rationalistic Intuition & Moral Knowledge</h3>
+            <p>Applying the rigor of mathematical logic to ethical decision-making. A personal framework for intentionality in work and life.</p>
+        </a>
+    </div>
+
+    <span class="section-label">Traveler, Your (Digital) Footprints</span>
+    <div class="article-list">
+        <a href="https://stanforddaily.com/2025/05/29/traveler-your-digital-footprints-an-escalator-to-heaven/" class="article-item" target="_blank">
+            <h3>An Escalator to Heaven</h3>
+            <p>On movement, transience, and the spiritual architecture of modern transitions.</p>
+        </a>
+        <a href="https://stanforddaily.com/2025/03/09/traveler-your-digital-footprints-savant-vibes/" class="article-item" target="_blank">
+            <h3>Savant Vibes</h3>
+            <p>Exploring the performance of intelligence and the cultural aesthetic of "knowing."</p>
+        </a>
+        <a href="https://stanforddaily.com/2025/02/19/traveler-your-digital-footprints-meeting-dr-t-and-antonio-machado/" class="article-item" target="_blank">
+            <h3>Meeting Dr. T and Antonio Machado</h3>
+            <p>A reflection on poetry, mentorship, and the paths we create by walking them.</p>
+        </a>
+        <a href="https://stanforddaily.com/2024/05/20/coffee-culture-and-economic-theory/" class="article-item" target="_blank">
+            <h3>Rubinstein and Coffee Culture</h3>
+            <p>The original piece on Ariel Rubinstein’s visit and the economics of casual seminar culture.</p>
+        </a>
+        <a href="https://stanforddaily.com/author/chueryang/" style="display:inline-block; margin-top:20px; font-weight:900; font-size:0.7rem; text-transform:uppercase; text-decoration:none; color:#e6a4a4;">View Archive →</a>
+    </div>
+</body>
+</html>

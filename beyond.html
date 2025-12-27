@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>& beyond | chuer yang</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    * { box-sizing: border-box; }
+    body { 
+      background-color: #f1f3ee; 
+      font-family: 'Inter', sans-serif; 
+      color: #2d342d; 
+      margin: 0; line-height: 1.6;
+    }
+
+       /* HORIZONTAL TOP-NAV */
+       .home-nav { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            z-index: 2000; 
+            background: rgba(238, 244, 249, 0.85); /* Matches background with blur */
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .home-nav .brand a { 
+            font-weight: 900; 
+            font-size: 1.1rem; 
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links a { 
+            color: #1a1a1a; 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            border-bottom: 1px solid #1a1a1a;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover { opacity: 0.6; }
+
+
+    .container { max-width: 900px; margin: 0 auto; padding: 160px 50px 100px 50px; }
+
+    h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: -0.04em; margin-bottom: 60px; text-transform: lowercase; }
+    
+    .section-label { font-family: 'JetBrains Mono'; font-size: 0.65rem; color: #8a968a; text-transform: uppercase; letter-spacing: 0.3em; margin-bottom: 30px; display: block; }
+
+    .entry { margin-bottom: 60px; }
+    .entry h2 { font-size: 1.2rem; font-weight: 800; margin-bottom: 10px; text-transform: lowercase; }
+    .entry p { color: #5e6d5e; font-size: 0.95rem; max-width: 650px; }
+    .entry .date { font-family: 'JetBrains Mono'; font-size: 0.75rem; color: #8a968a; margin-left: 10px; font-weight: 400; }
+
+    /* map styling */
+    .map-container { margin-top: 80px; padding-top: 60px; border-top: 1px solid rgba(0,0,0,0.1); }
+    #travel-map { 
+        height: 500px; border-radius: 32px; 
+        background: #e6e9e0; border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    #map-toggle { margin-bottom: 20px; display: flex; gap: 10px; }
+    #map-toggle button {
+        background: none; border: 1px solid #2d342d; padding: 6px 15px;
+        font-family: 'JetBrains Mono'; font-size: 0.7rem; border-radius: 100px;
+        cursor: pointer; text-transform: lowercase; transition: 0.3s;
+    }
+    #map-toggle button:hover { background: #2d342d; color: #f1f3ee; }
+
+    .leaflet-popup-content-wrapper { background: #f1f3ee; border-radius: 12px; font-family: 'Inter'; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    
+    @media (max-width: 768px) { h1 { font-size: 2.5rem; } }
+  </style>
+</head>
+<body>
+
+<nav class="home-nav">
+  <div class="brand"><a href="index.html">CHUER YANG</a></div>
+  <div class="nav-links">
+      <a href="projects.html">projects</a>
+      <a href="sustainability.html">sustainability</a>
+      <a href="writing.html">writing</a>
+      <a href="enjoying.html">enjoying</a>
+      <a href="beyond.html">& beyond</a>
+  </div>
+</nav>
+
+<div class="container">
+    <h1>& beyond</h1>
+
+    <div class="entry">
+        <h2>geodesic dome at half moon bay <span class="date">2025</span></h2>
+        <p>built a geodesic dome for my 20th birthday inspired by the buckminster fuller papers in the stanford special collections archive!</p>
+    </div>
+
+    <div class="entry">
+        <h2>19k for 19 <span class="date">2024</span></h2>
+        <p>ran 19k on may 19 for my 19th birthday via bay2breakers + lombard street. did not train...</p>
+    </div>
+
+    <div class="entry">
+        <h2>half marathon <span class="date">2022</span></h2>
+        <p>erged a half marathon with kathryn in the river city rowing club boathouse!</p>
+    </div>
+
+    <div class="entry">
+        <h2>run to feed the hungry <span class="date">2021—2025</span></h2>
+        <p>religious turkey trotter!</p>
+    </div>
+
+    <div class="map-container">
+        <span class="section-label">traveling</span>
+        <div id="map-toggle">
+            <button onclick="filterMap('all')">all</button>
+            <button onclick="filterMap('physical')">physical</button>
+            <button onclick="filterMap('cerebral')">cerebral</button>
+        </div>
+        <div id="travel-map"></div>
+    </div>
+</div>
+
+<script>
+  // load leaflet
+  const leafletCSS = document.createElement('link');
+  leafletCSS.rel = 'stylesheet';
+  leafletCSS.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+  document.head.appendChild(leafletCSS);
+
+  const leafletJS = document.createElement('script');
+  leafletJS.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+  leafletJS.onload = renderMap;
+  document.head.appendChild(leafletJS);
+
+  function renderMap() {
+    const map = L.map('travel-map', { scrollWheelZoom: false, zoomControl: false }).setView([40, 10], 3);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; CARTO'
+    }).addTo(map);
+
+    const entries = [
+      { title: "amsterdam", type: "physical", coords: [52.3676, 4.9041], date: "aug 2024", highlights: "shopping + dutch museums" },
+      { title: "andalucia", type: "physical", coords: [37.5443, -4.7278], date: "dec 2023", highlights: "grapes at midnight in seville; norwegian wood" },
+      { title: "barcelona", type: "physical", coords: [41.3851, 2.1734], date: "aug 2024", highlights: "sunrise paddleboarding; gaudi; ghosts of spain" },
+      { title: "brussels", type: "physical", coords: [50.8477, 4.3572], date: "july 2023", highlights: "dutch fine arts; belgian waffles" },
+      { title: "madrid", type: "physical", coords: [40.4167, -3.7033], date: "dec 2023", highlights: "el greco at prado; day trip to toledo" },
+      { title: "menorca", type: "physical", coords: [39.9496, 4.1104], date: "aug 2024", highlights: "cave clubbing; mediterranean swims; pomadas" }
+    ];
+
+    const markers = [];
+
+    entries.forEach(entry => {
+      const color = entry.type === 'physical' ? '#8c1c1c' : '#5e6d5e';
+      const m = L.circleMarker(entry.coords, {
+        radius: 6, fillColor: color, color: "#fff", weight: 2, opacity: 1, fillOpacity: 0.9
+      }).addTo(map);
+
+      m.bindPopup(`
+        <div style="font-family: 'Inter'; font-size: 0.8rem; line-height:1.4;">
+          <strong>${entry.title}</strong> <span style="opacity:0.5">— ${entry.date}</span><br>
+          <p style="margin:5px 0 0 0; color:#5e6d5e; font-style:italic;">"${entry.highlights}"</p>
+        </div>
+      `);
+      m._type = entry.type;
+      markers.push(m);
+    });
+
+    window.filterMap = function(type) {
+      markers.forEach(m => {
+        const show = type === 'all' || m._type === type;
+        if (show) m.addTo(map); else map.removeLayer(m);
+      });
+    };
+  }
+</script>
+
+</body>
+</html>
